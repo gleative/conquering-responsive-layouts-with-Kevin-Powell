@@ -1,0 +1,25 @@
+* { box-sizing: border-box; }
+
+body { 
+    margin: 0;
+    font-family: sans-serif;
+} 
+
+/* ! Merk i han sin løsning, trengte han bare å legge til 1 extra klasse. Dette er fordi tekstblokkene har posisjon til felles! */
+
+/* DETTE ER HVA SOM VI VIL HA FELLES MED BEGGE BOKSENE */
+.container {
+    width: 80%;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.intro {
+    background: #23424A;
+    color: white;
+    padding: 50px 0; 
+}
+
+.intro-content {
+    width: 50%;
+}

@@ -1,0 +1,211 @@
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    @include for-phone-only() {
+      width: 90%;
+    }
+}
+
+.row {
+    /* display: flex => flex container */
+    display: flex;
+    justify-content: space-between;
+    
+    /* can't use yet */
+    /* gap: 100px; */
+
+    @include for-phone-only() {
+      display:block; // Gjør at de går nedover
+    }
+}
+
+.col {
+    /* these are now flex items */
+    width: 100%;
+}
+
+.col + .col {
+    margin-left: 30px;
+}
+
+.hero {
+    padding: 100px 0;
+    background-color: #23424A;
+    color: #FFF;
+}
+
+.hero__text { 
+    width: 62%;
+
+    @include for-phone-only() {
+      width: 100%;
+    }
+}
+
+.hero__img {
+    width: 32%;
+    align-self: flex-start;
+
+    @include for-phone-only() {
+      margin-top: 1em;
+    }
+}
+
+.hero p {
+    margin-bottom: 3em;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase; 
+    color: #23424A;
+    font-weight: 900;
+    background-color: #38CFD9;
+    padding: .75em 2em;
+    border-radius: 100px;
+}
+
+.btn:hover,
+.btn:focus {
+    transition: 0.4s;
+    background: white;
+}
+
+.overview {
+    margin-top: 2em;
+}
+
+.overview__text h2{
+    color: #87629A;
+}
+
+.overview-side {
+    background: #136C72;
+    color: white;
+}
+
+.overview-side__text {
+    text-align: center;
+    padding: 1em;
+}
+
+.container-left {
+    width: 62%;
+
+    @include for-phone-only() {
+      width: 100%;
+    }
+}
+
+.container-right {
+    width: 32%;
+
+    @include for-phone-only() {
+      width: 100%;
+    }
+}
+
+/* * NAV ------------ */
+
+header {
+    background-color: #136C72;
+    padding: 1.5em; /* Setter høyde på meny */   
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* This makes so we can stretch it as much as possible! (push it all the way to the logo) */
+    flex-grow: 1;
+    /* border: 1px red solid; */
+}
+
+.nav-links {
+    /* Sett opp nav links sånn her */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-links--primary {
+    /* ! CENTER THIS NAV LIST between our logo and secondary nav list!! */
+    margin: 0 auto;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+/* 
+  '+' betyr den vedsiden av! 
+  Eks: elem1 + elem2, elem2 er selected 
+*/
+.nav-item + .nav-item { 
+    margin-left: 1em;
+}
+
+.nav-link-btn {
+    background-color: white;
+    color: #136C72;
+    border-radius: 100px;
+    padding: .55em;
+    text-decoration: none;
+}
+
+.nav-link-btn:focus,
+.nav-link-btn:hover {
+    transition: 0.25s;
+    background-color: #38CFD9;
+    color: white;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    color: #38CFD9;
+}
+
+
+

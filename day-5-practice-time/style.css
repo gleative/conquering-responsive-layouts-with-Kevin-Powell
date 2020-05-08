@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.intro {
+  background-color: #23424A;
+  padding: 6em 0;
+  color: white;
+}
+
+.intro-container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 63em;
+  /* border: 2px solid red; */
+}
+
+/* ? __ naming convention, for å forklare at denne text tilhører til intro */
+.intro__text {
+  width: 70%;
+  /* border: 2px solid magenta; */
+}
+
+.intro-title {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 40px;
+  margin: 0.75em 0;
+}
+
+.intro-desc {
+  font-size: 21px;
+  font-weight: 100;
+}
+
+.intro-link {
+  display: inline-block; /*  ! Nødvending for at den er INNI BOKSEN */
+  background-color: #38CFD9;
+  color: #23424A;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1em 2em;
+  border-radius: 30px;
+  font-size: 21px;
+  font-weight: 600;
+  margin-top: 3em;
+}
+
+.intro-link:hover {
+  transition: 0.2s linear;
+  background-color: white;
+  color: #23424A;
+}

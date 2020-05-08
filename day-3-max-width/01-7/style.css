@@ -1,0 +1,32 @@
+/* CSS VARIABLES */
+:root {
+    --max-width-val: 50%;
+}
+
+* { box-sizing: border-box; }
+
+body { 
+    margin: 0;
+    font-family: sans-serif;
+} 
+
+.container {
+    margin: 0 auto;
+    background: #23424A;
+    color: white;
+    padding: 50px 0; 
+}
+
+.intro-content-container {
+    max-width: var(--max-width-val);
+    margin: 0 auto;
+}
+
+.intro-content {
+    max-width: var(--max-width-val);
+}
+
+.intro-content-extra {
+    max-width: var(--max-width-val);
+    margin: 0 auto;
+}

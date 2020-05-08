@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.parent {
+  background: grey;
+  padding: 50px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.child {
+  background: yellow;
+  height: 270px;
+  width: 80%; /* ! HUSK, 80% AV PARENT sin bredde ALLTID */
+  margin: 0 auto;
+}
