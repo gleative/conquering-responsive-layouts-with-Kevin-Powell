@@ -221,6 +221,7 @@ header {
 
     .nav__item {
         margin: 0;
+        /* YOU CAN DELETE THIS LINE, JUST A CHECK MATE */
     }
 
     .nav__item + .nav__item {
